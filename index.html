@@ -3,14 +3,11 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Graphix D Affiliate Website</title>
+    <title>GD Official website</title>
     
-    <style> body{
-
+    <style>
+    body{
         background-image: url("public/bg.jpg");
-					 background-repeat: no-repeat;
-  background-attachment: fixed;
-}
     }    
         button
              { margin: auto; 
@@ -70,8 +67,8 @@
         }
         @keyframes slide {
             from{
-                width: 20em;
-                position: relative;
+                width: 30em;
+                position:relative;
                 right:0;
             }
             to{
@@ -79,6 +76,7 @@
             }
         }    
         .slide{
+            white-space:pre;
             animation: slide 12s linear 0s infinite;
         }
         span{
@@ -129,13 +127,14 @@
               text-align:left;
           } 
        }
-       #aboutcont{			
-           text-align:center; 
+       #aboutcont{            
+           
+           right:0;
            
         
        }
         .tp{
-       				display:inline-block;
+                       display:inline-block;
             color:black;
             background-color:aliceblue;
             padding:1%;
@@ -149,8 +148,9 @@
             
             }
             a{
-           			 list-style-type:circle;
-                text-decoration:none;
+                        list-style-type:circle;
+                        text-decoration:none;
+                        font-weight:bolder ;
             }
         .expand:active{
             transform: translateY(-2%);
@@ -165,7 +165,7 @@
             max-height: 80%;
         }
         #logo{
-            border-radius: 50%;
+            border-radius: 40%;
             margin: 2% 2%;
             max-height: 4em;
             max-width: 4em;
@@ -173,7 +173,7 @@
             box-shadow: 5px 5px 5px 0.5px rgb(130, 134, 136) ;
         }
         .header{
-            text-align: right;
+            text-align:right ;
             background-image: url(/public/bg.jpg);
             background-color: rgba(255, 255, 255, 0.2);
             background-blend-mode: lighten;
@@ -182,7 +182,7 @@
                     }
         .top{
             padding:1%;
-            
+            right:0;
             border-radius: 20%;
             display: block;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -206,14 +206,15 @@
             color: gray;
             background-color: aliceblue;
             position: sticky;
-        }    
+        }
     </style>
   </head>
   <body>
+
     <header>
         <img id="logo" src="public/weblogo.jpg" alt="logo"/>
         <div class="header">
-            <span class="slide">Shop your skills, one time payment</span>
+            <a href="https://chat.whatsapp.com/J2fbu7Ie1vC7MtakPPxAZo" class="slide">Learn how to create a FB or Instagram ads for your businesss for free</a>
             <div id="aboutcont" class="tp" onclick ="opeen()">About
                </br><div id= "abt" style ="display:none"><b>How Does GD Work?</b>
 <ol>
@@ -300,20 +301,26 @@
             
         </ul>
             
-                <h3 style="visibility: hidden;" class="info"><img id="dol" src="public/dollars.svg"/><div class="tr" > Join this live group Now...   Click the link below</div><img id="hand" src="public/hnd.svg"/>
-                <a href="https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm">Whatsapp link</a></h3>
+                <h3 style="visibility: hidden;" class="info"><img id="dol" src="/public/dollars.svg"/><div class="tr" > Join this live group Now...   Click the link below</div><img id="hand" src="public/hnd.svg"/>
+                <a class="loc" href="">Whatsapp link</a></h3>
             
         <footer>
                 copyright &copy; Graphix_ng 2024
         </footer>
     </div>
     <script>
-    var holder = []
-function link(i) {
+        var holder = []
+const whatslink =["https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm", "https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm","https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil"]
 
+function link(i) {
+      // var i;
+            const loc=document.querySelector('.loc');
+            //console.log(loc)
+            loc.href=whatslink[i];
             const btns=document.querySelectorAll('button')
-            const info=document.querySelector('.info')
-nope=document.querySelector('#nope')
+            const info=document.querySelector('.info');
+            //console.log(whatslink[i]);
+//nope=document.querySelector('#nope')
             btns.forEach(el=>{
                 if(el.childNodes.length>1){
 
@@ -348,7 +355,7 @@ nope=document.querySelector('#nope')
           }
           
         }
-            
+        
     </script>
   </body>
 </html>

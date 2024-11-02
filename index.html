@@ -131,11 +131,16 @@
           } 
        }
        #aboutcont{            
-           
            right:0;
-           
-        
        }
+      input{
+            margin:1%;
+            color:green;
+            background-color:aliceblue;
+            border-radius:5%;
+            border:0.5px solid gray;
+            font-weight:bold;
+      }
         .tp{
                        display:inline-block;
             color:black;
@@ -226,7 +231,7 @@
 <b>Benefits of Affiliate Marketing:<b>
 <ol>
 
-<li>Low startup costs (often free to join).</li>
+<li>Zero startup costs (free to join).</li>
 <li>Passive income potential.</li>
 <li>Flexibility: promote products from anywhere, at any time.</li>
 <li>Minimal risk: no inventory or shipping hassles.</li>
@@ -244,6 +249,9 @@
     <div class="bodycontainer">
         <h1> WELCOME TO <span>GD</span> WHERE WE MENTOR <span>YOUR SKILLS</span> AND PROVIDE BASIC &amp; ADVANCED TUTORSHIP</h1>
         <ul>
+          <input id="names" type="text" placeholder="name"/>
+        <input id="emails" type="text" placeholder="email"/>
+        <input class="save" type="button" onclick="save()" value="save"/>
             <li>
                 <button class="expand" onclick="link(0)">AUTOMATED INCOME MACHINE </button>
                 <h4> A strategy on how to make passive income at the comfort of your home </h4>
@@ -253,7 +261,7 @@
                 <h4> Step by step guide to start and earn weekly from affiliate marketing</h4>
             </li>
             <li>
-                <button class="expand" onclick="link(2)">Tiktok Monetisation and Growth Bueprint (T.M.O.B)</button>
+                <button class="expand" onclick="link(2)">Tiktok Monetisation and Growth Blueprint (T.M.O.B)</button>
                 <h4> Learn how to make money on TikTok with these effective strategies and tips. Unlock your earning potential and monetize your TikTok presence. </h4>
             </li>
             <li>
@@ -301,7 +309,7 @@
             
         </ul>
             
-                <h3 style="visibility: hidden;" class="info"><img id="dol" src="public/dollars.svg"/><div class="tr" > Join this live group Now...   Click the link below</div><img id="hand" src="public/hnd.svg"/>
+                <h3 style="visibility: hidden;" class="info"><img id="dol" src="public/dollars.svg"/><div class="tr" >To send a direct message...   Click the link below</div><img id="hand" src="public/hnd.svg"/>
                 <a class="loc" href="">Whatsapp link</a></h3>
             
         <footer>
@@ -310,52 +318,74 @@
     </div>
     <script>
         var holder = []
-const whatslink =["https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm", "https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm","https://chat.whatsapp.com/Fy2pOTMbs7tFYcTw9VKRXm","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/EsxaxEl0Ma90a0AxkLk43W","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/DD0EVE5gBpR8WQvCt72urR","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil","https://chat.whatsapp.com/EoKZrHx52AN9edBHRIzoil"]
+function save(){
+    var names=document.querySelector("#names")
+    var emails=document.querySelector("#emails")
+    alert("saved")
+}
 
+//const btn=document.querySelectorAll('button').innerText
+
+var hold=["AUTOMATED INCOME MACHINE", "Affiliate Marketing Startup Blueprint", "Tiktok Monetisation and Growth Blueprint (T.M.O.B)","The Whatsapp Cashout Formula","Ultimate Secrets of Making 6 Figures Monthly as a Freelancer on Fiverr(for beginners and expert)","CRYPTO AND GIFTCARD EXCHANGE MASTERY (C.G.E.M)","Video Editing Program for Smartphones","How to Start a Laundry Business Without the Necessary Equipment", "Content Creation Toolbox", "Mini Importation Goldmine","Amazon KDP Hybrid Book Cash Secrets", "Profitable Leads Generation Secret Training", "Oil and Gas Money Blueprint"];
+//btn.forEach(x=>{hold.push(x.value)})
+//console.log(btn)
 function link(i) {
-      // var i;
+//console.log(hold[i])
+      const whatslink ="https://wa.me/+2348189851621?text=hello%20sir,%20my%20name%20is%20"+`${names.value}`+"%20and%20i%20am%20interested%20in%20the%20course%20"+`${hold[i]}` 
+          const btns=document.querySelectorAll('button')
             const loc=document.querySelector('.loc');
             //console.log(loc)
-            loc.href=whatslink[i];
-            const btns=document.querySelectorAll('button')
+            loc.href=whatslink;
+
+
             const info=document.querySelector('.info');
-            //console.log(whatslink[i]);
-//nope=document.querySelector('#nope')
+            
+
             btns.forEach(el=>{
+
                 if(el.childNodes.length>1){
+
+
 
                    el.removeChild(info)
                   // el.removeChild(nope)
+
                    // console.log(el.childNodes)
+
             }
+
             })
             
             holder.push(i)
             //console.log(holder)
         /*let hold  add an array to check the list if it has been entered twice=i*/
         if(!(holder[holder.length-1]==holder[holder.length -2])){
+
         btns[i].appendChild(info);
         //console.log(holder);
       btns[i].lastChild.style.display="block"; btns[i].lastChild.style.visibility="visible";
+
        }
        else{
         btns[i].appendChild(info);
         btns[i].lastChild.style.display="none";
         holder=[];
        } 
+
         }
         
+
     function opeen(){
+
           let about = document.querySelector("#abt");
           if(about.style.display==="none"){
           //about.appendChild(inf);
+
           about.style.display ="inline"}
           else{
               about.style.display="none"
-          }
-          
         }
-        
+      }
     </script>
   </body>
 </html>

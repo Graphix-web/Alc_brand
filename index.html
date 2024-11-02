@@ -164,7 +164,9 @@
         .expand:active{
             transform: translateY(-2%);
         }
-        
+        #x{
+          max-width: 30%;
+            max-height: 30%;}
         #hand, #dol{
             max-width: 50%;
             max-height: 40%;
@@ -250,7 +252,7 @@
         <h1> WELCOME TO <span>GD</span> WHERE WE MENTOR <span>YOUR SKILLS</span> AND PROVIDE BASIC &amp; ADVANCED TUTORSHIP</h1>
         <ul>
           <input id="names" type="text" placeholder="name"/>
-        <input id="emails" type="text" placeholder="email"/>
+        <input id="emails" type="email" placeholder="email"/>
         <input class="save" type="button" onclick="save()" value="save"/>
             <li>
                 <button class="expand" onclick="link(0)">AUTOMATED INCOME MACHINE </button>
@@ -313,7 +315,7 @@
                 <a class="loc" href="">Whatsapp link</a></h3>
             
         <footer>
-                copyright &copy; Graphix_ng 2024
+                copyright &copy; Graphix_ng <img id ="x"  src="public/x.svg"/> 2024
         </footer>
     </div>
     <script>

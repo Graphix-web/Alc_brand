@@ -319,12 +319,13 @@
     <script>
         var holder = []
 function save(){
-    var names=document.querySelector("#names")
-    var emails=document.querySelector("#emails")
-  if((names.value!="null")&&(emails.value!="null")){
+    var names=document.querySelector("#names").value
+    var emails=document.querySelector("#emails").value
+  if((names==="")||(emails==="")){alert("incomplete information entered")}
+  else{
     setTimeout(()=>{alert("registered successfully")},800)
-}}
-      else{alert("incomplete information entered")} 
+}
+      } 
 
 //const btn=document.querySelectorAll('button').innerText
 

@@ -78,6 +78,7 @@
         }    
         .slide{
             white-space:pre;
+            overflow-x: hidden;
             animation: slide 12s linear 0s infinite;
         }
         span{
@@ -137,7 +138,7 @@
             margin:1%;
             color:green;
             background-color:aliceblue;
-            border-radius:5%;
+            border-radius:20%;
             border:0.5px solid gray;
             font-weight:bold;
       }
@@ -224,11 +225,11 @@
     <header>
         <img id="logo" src="public/weblogo.jpg" alt="logo"/>
         <div class="header">
-            <a href="https://chat.whatsapp.com/J2fbu7Ie1vC7MtakPPxAZo" class="slide">Dive into a web3 community now</a>
+            <a href="https://chat.whatsapp.com/J2fbu7Ie1vC7MtakPPxAZo" class="slide">Dive into a web3 community, expand your web 2 skills! </a>
             <div id="aboutcont" class="tp" onclick ="opeen()">About
                </br><div id= "abt" style ="display:none"><b>How Does GD Work?</b>
 <ol>
-<li>join an WhatsApp group of your choice. </li>
+<li>join a WhatsApp group of your choice. </li>
 <li>You choose skills/services you prefer to learn.</li>
 <li>We teach you the basics of the course and how to get started for free.</li>
 <li>We send videos to our premium students relating to your course of choice.</li>
@@ -255,7 +256,7 @@
         <ul>
           <input id="names" type="text" placeholder="name"/>
         <input id="emails" type="email" placeholder="email"/>
-        <input class="save" type="button" onclick="save()" value="save"/>
+        <input class="save" type="button" onclick="save()" value="signup"/>
             <li>
                 <button class="expand" onclick="link(0)">Web Design </button>
                 <h4> A dive into HTML, CSS and Javascript, becoming a web designer has never been made easier</h4>
@@ -320,7 +321,7 @@
 function save(){
     var names=document.querySelector("#names")
     var emails=document.querySelector("#emails")
-    setTimeout(()=>{alert("saved")},800)
+    setTimeout(()=>{alert("registered successfully")},800)
 }
 
 //const btn=document.querySelectorAll('button').innerText

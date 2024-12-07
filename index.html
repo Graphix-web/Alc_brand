@@ -321,8 +321,10 @@
 function save(){
     var names=document.querySelector("#names")
     var emails=document.querySelector("#emails")
+  if((names.value!="null")&&(emails.valie!="null")){
     setTimeout(()=>{alert("registered successfully")},800)
-}
+}}
+      else{alert("incomplete information entered")} 
 
 //const btn=document.querySelectorAll('button').innerText
 

@@ -1,394 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GD Official website</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALC Clothing Brand</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<script>
     
-    <style>
-    body{
-        background-image: url("public/bg.jpg");
-        background-attachment: fixed; 
-    }    
-        button
-             { margin: auto; 
-                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            overflow: auto; 
-            background: linear-gradient(315deg, rgb(184, 130, 180) 3%,
-                 rgb(129, 150, 172) 38%, 
-                 rgb(116, 143, 141) 68%, 
-                 rgb(158, 127, 127) 98%); 
-            animation: gradient 15s ease infinite; 
-            background-size: 200% 400%; 
-            background-attachment: fixed; 
-        }
-    @keyframes gradient 
-    { 
-        0% { background-position: 0% 0%; } 
-        50% { background-position: 100% 100%; } 
-        100% { background-position: 0% 0%; } } 
-    .wave { background: rgba(190, 140, 140, 0.25); 
-        border-radius: 1000% 1000% 0 0; 
-        position: fixed; 
-        width: 200%; 
-        height: 12em; 
-        animation: wave 10s -3s linear infinite; 
-        transform: translate3d(0, 0, 0); 
-        opacity: 0.8; 
-        bottom: 0; 
-        left: 0; 
-        z-index: -1; } 
-    .wave:nth-of-type(2) { 
-        bottom: -1.25em; 
-        animation: wave 18s linear reverse infinite; 
-        opacity: 0.8; } 
-    .wave:nth-of-type(3) { 
-        bottom: -2.5em; 
-        animation: wave 20s -1s reverse infinite;
-
-        
-        }
-    
-            .bodycontainer li{
-            display:block;
-            list-style:none;
-            
-            background-size: 10%;
-            padding-left: 10%;
-            padding-bottom: 4%; 
-        }
-        @keyframes effect {
-            from{
-                opacity: 0.1;
-            }
-            to{
-                opacity: 0.95;
-                
-            }
-        }
-        @keyframes slide {
-            from{
-                width: 30em;
-                position:relative;
-                right:0;
-            }
-            to{
-                right: 180%;
-            }
-        }    
-        .slide{
-            white-space:pre;
-            overflow-x: hidden;
-            animation: slide 12s linear 0s infinite;
-        }
-        span{
-            color: green;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            text-indent: 4%;
-
-            font-size: large;
-        } 
-          button > *{
-            width:140vw;
-          }
-        .info {
-            max-width: 20%;
-            max-height :20%;
-            color: yellow;
-            animation: effect 1.8s linear ;
-            display: inline-flex;
-            flex-direction:row;
-            flex-wrap: nowrap;
-        }
-        
-        
-        h1{font-size: large;
-            text-align: center;
-
-            color: darkblue;
-            font-family: cursive;
-        }
-        .expand{
-            background-color: rgba(0,0,0,0.4);
-            border: none;
-            display: flex;
-            flex-direction: column;
-            border-radius: 4%;
-            color: #fff;
-            text-indent: 0%;
-            margin: 5%;
-            font-size: 1.2em;
-        
-        }
-       .ty{
-         background-color :aliceblue;
-         
-         border-radius:10%;
-         font-size: medium;
-    }
-       
-          li{
-              text-align:left;
-          } 
-       }
-       #aboutcont{            
-           right:0;
-       }
-      input{
-            margin:1%;
-            color:green;
-            background-color:aliceblue;
-            border-radius:20%;
-            border:0.5px solid gray;
-            font-weight:bold;
-      }
-        .tp{
-                       display:inline-block;
-            color:black;
-            background-color:aliceblue;
-            padding:1%;
-            margin:2%;
-            width:fit-content;
-            text-align:center;
-            
-        }
-       .tr{
-            min-width: 250%;
-        	font-size :small
-            
-            }
-            a{
-                        list-style-type:circle;
-                        text-decoration:none;
-                        font-weight:bolder ;
-            }
-        .expand:active{
-            transform: translateY(-2%);
-        }
-        #x{
-            max-width: 8%;
-            max-height: 8%;
-            margin:0 0;
-            padding:0 0;
-        }
-        #hand, #dol{
-            max-width: 50%;
-            max-height: 40%;
-        }
-        #logo{
-            border-radius: 40%;
-            margin: 2% 2%;
-            max-height: 4em;
-            max-width: 4em;
-            justify-content: center;
-            box-shadow: 5px 5px 5px 0.5px rgb(130, 134, 136) ;
-        }
-        .header{
-            text-align:right ;
-            background-image: url(/public/bg.jpg);
-            background-color: rgba(255, 255, 255, 0.2);
-            background-blend-mode: lighten;
-            border-bottom:2px solid black ;
-            max-height: 40em;
-                    }
-        .top{
-            padding:1%;
-            right:0;
-            border-radius: 20%;
-            display: block;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background-color: aliceblue;
-            
-            
-            width:fit-content;
-            overflow-x:hidden;
-            
-        
-        }
-        .top:active {
-                            background-color:aliceblue;
-                            border-radius:10%;
-            animation: effect 1.8s linear ;
-        }
-        
-       
-        footer{
-            text-align: center;
-            color: gray;
-            background-color: aliceblue;
-            position: sticky;
-        }
-    </style>
-  </head>
-  <body>
-
-    <header>
-        <img id="logo" src="public/weblogo.jpg" alt="logo"/>
-        <div class="header">
-            <a href="https://chat.whatsapp.com/J2fbu7Ie1vC7MtakPPxAZo" class="slide">Dive into a web3 community, expand your web 2 skills! </a>
-            <div id="aboutcont" class="tp" onclick ="opeen()">About
-               </br><div id= "abt" style ="display:none"><b>How Does GD Work?</b>
-<ol>
-<li>join a WhatsApp group of your choice. </li>
-<li>You choose skills/services you prefer to learn.</li>
-<li>We teach you the basics of the course and how to get started for free.</li>
-<li>We send videos to our premium students relating to your course of choice.</li>
-</ol>
-<b>Benefits of joining our platform <b>
-<ol>
-
-<li>Free to join. </li>
-<li>Passive income potential.</li>
-<li>Zero risk.</li>
-<li>Opportunity to promote products you love and use.</li>
-</ol>
-    </div>
-</div>
-            
-            <ul class ="top" > Social Media pages
-               <li class="social"><a id= "fb" href="https://www.facebook.com/profile.php?id=61564813421062&mibextid=ZbWKwL" target ="_self">Facebook Page</a></li>
-               <li class="social"> <a id="x" href="x.com/Graphix_NG" target ="_self">X Page</a></li>
-        </ul>
-                    
-    </header>
-    <div class="bodycontainer">
-        <h1> WELCOME TO <span>GD</span> WHERE WE MENTOR <span>YOUR SKILLS</span> AND PROVIDE BASIC &amp; ADVANCED TUTORSHIP</h1>
-        <ul>
-          <input id="names" type="text" placeholder="name"/>
-        <input id="emails" type="email" placeholder="email"/>
-        <input class="save" type="button" onclick="save()" value="signup"/>
-            <li>
-                <button class="expand" onclick="link(0)">Web Design </button>
-                <h4> A dive into HTML, CSS and Javascript, becoming a web designer has never been made easier</h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(1)">Freelance and Fiverr Profile Buildup</button>
-                <h4> Guides and strategies on how to get as many gigs as possible, this is a systematic process</h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(2)">Graphic Design</button>
-                <h4> Improve your appearance on the digital and graphics world, get access to clients. </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(3)">Socials Media Management</button>
-                <h4> Gain more audience and followers by simply following our easy guides (this service is free all through) </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(4)">Video Editing</button>
-                <h4> A detailed program on knowing the top video editing apps and how to use them effectively. </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(5)">Content Marketing </button>
-                <h4> Everyone who creates content needs a tool box; and that's what this eBook/videos aims to achieve. </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(6)">Mini Importation Goldmine</button>
-                <h4> know the secrets and tools on importing gadgets, perfumes, etc for your business. </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(7)">Laundry Business (no Equipment) </button>
-                <h4> The skills and requirements in order to sustain a Laundry facility, marketing and reaching your customers easily </h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(8)">TikTok Growth Blueprint</button>
-                <h4> Grow your TikTok account to reach unbelievable audience and monetize it. </h4>
-            </li>
-           
-            <li>
-                <button class="expand" onclick="link(9)">Survey Marketing </button>
-                <h4> Earn a side income by taking surveys using services like VPN, Socks, and UK email... </h4>
-            </li>
-           
-                <button class="expand" onclick="link(10)">Affiliate Marketing </button>
-                <h4> Earn a passive income by linking to or more people without leaving your sofa</h4>
-            </li>
-            <li>
-                <button class="expand" onclick="link(11)">Learn Cryptocurrencies Trading </button>
-                <h4> Learn how to trade cryptocurrencies like Bitcoin, Ethereum & Altcoins, learn technical analysis & advanced terminology.  </h4>
-            </li>
-            
-        </ul>
-            
-                <h3 style="visibility: hidden;" class="info"><img id="dol" src="public/dollars.svg"/><div class="tr" >To send a direct message...   Click the link below</div><img id="hand" src="public/hnd.svg"/>
-                <a class="loc" href="">Whatsapp link</a></h3>
-            
-        <footer>
-                copyright &copy; Graphix_ng <img id ="x"  src="public/x.svg"/> 2024
-        </footer>
-    </div>
-    <script>
-        var holder = []
-function save(){
-    var names=document.querySelector("#names").value
-    var emails=document.querySelector("#emails").value
-  if((names==="")||(emails==="")){alert("incomplete information entered")}
-  else{
-    setTimeout(()=>{alert("registered successfully")},800)
+function openNav() {
+ let menu= document.getElementById("menu");
+menu.style.display ="flex";
+document.getElementById("open").style.display="none";
 }
-      } 
 
-//const btn=document.querySelectorAll('button').innerText
-
-var hold=["AUTOMATED INCOME MACHINE", "Affiliate Marketing Startup Blueprint", "Tiktok Monetisation and Growth Blueprint (T.M.O.B)","The Whatsapp Cashout Formula","Ultimate Secrets of Making 6 Figures Monthly as a Freelancer on Fiverr(for beginners and expert)","CRYPTO AND GIFTCARD EXCHANGE MASTERY (C.G.E.M)","Video Editing Program for Smartphones","How to Start a Laundry Business Without the Necessary Equipment", "Content Creation Toolbox", "Mini Importation Goldmine","Amazon KDP Hybrid Book Cash Secrets", "Profitable Leads Generation Secret Training", "Oil and Gas Money Blueprint"];
-//btn.forEach(x=>{hold.push(x.value)})
-//console.log(btn)
-function link(i) {
-//console.log(hold[i])
-      const whatslink ="https://wa.me/+2348189851621?text=hello%20sir,%20my%20name%20is%20"+`${names.value}`+"%20and%20i%20am%20interested%20in%20the%20course%20"+`${hold[i]}` 
-          const btns=document.querySelectorAll('button')
-            const loc=document.querySelector('.loc');
-            //console.log(loc)
-            loc.href=whatslink;
-
-
-            const info=document.querySelector('.info');
-            
-
-            btns.forEach(el=>{
-
-                if(el.childNodes.length>1){
-
-
-
-                   el.removeChild(info)
-                  // el.removeChild(nope)
-
-                   // console.log(el.childNodes)
-
-            }
-
-            })
-            
-            holder.push(i)
-            //console.log(holder)
-        /*let hold  add an array to check the list if it has been entered twice=i*/
-        if(!(holder[holder.length-1]==holder[holder.length -2])){
-
-        btns[i].appendChild(info);
-        //console.log(holder);
-      btns[i].lastChild.style.display="block"; btns[i].lastChild.style.visibility="visible";
-
-       }
-       else{
-        btns[i].appendChild(info);
-        btns[i].lastChild.style.display="none";
-        holder=[];
-       } 
-
-        }
+/* Set the width of the side navigation to 0 */
+function closeNav() {
+  document.getElementById("menu").style.display = "none";
+document.getElementById("open").style.display="block";
+}
+function addcart(cart){
+let previousSibling = cart.previousElementSibling
+    alert(previousSibling.innerText+" has been added to your cart" )
+}
+</script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <nav>
+            <div class="menu" id="menu">
+                <a href="#" onclick="closeNav()"><i class="material-icons">close</i></a>
+                <a href="#">Women</a>
+                <a href="#">Men</a>
+                <a href="#">Kids</a>
+                <a href="#">Accessories</a>
+            </div>
+            <span id="open" onclick="openNav()"><i class="material-icons">menu</i>
+</span>
+        </nav>
+        <div class="search-bar">
+            <input type="search" placeholder="Search...">
+            <button><i class="material-icons">search</i></button>
         
+        <i class="material-icons">shopping_cart</i>
+            <a href="https://graphix-web.github.io/Alc/"><i class="material-icons">person</i></a>
+    </div>   
+    </header>
 
-    function opeen(){
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="hero-image.jpg" alt="Hero Image">
+        <h1>Welcome to ALC Clothing Brand</h1>
+        <p>I have been waiting for you🎉, welcome to Ada luxury couture, your contemporary tailoring on the go. Shop affordable luxury made in Nigeria wears. Enjoy.</p>
+        <button>Shop Now</button>
+    </section>
 
-          let about = document.querySelector("#abt");
-          if(about.style.display==="none"){
-          //about.appendChild(inf);
+    <!-- Featured Products Section -->
+    <section class="featured-products">
+        <h2>Featured Products</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="product1.jpg" alt="Product 1"><p>₦2000</p>
+                <h3>Product 1</h3>
+                <button onclick="addcart(this)" class="cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product2.jpg" alt="Product 2"><p>₦3000</p>
+                <h3>Product 2</h3>
+                <button onclick="addcart(this)" class="cart">Add to Cart</button>
+            </div>
+            <div class="product">
+                <img src="product3.jpg" alt="Product 3"><p>₦5000</p>
+                <h3>Product 3</h3>
+                <button class="cart" onclick="addcart(this)">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; ALC Clothing BRAND 2024</p>
+        <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Terms and Conditions</a></li>
+        </ul>
+        <div class="social-media-links">
+            <a href="https://www.instagram.com/ada_luxury_couture/profilecard/?igsh=MW5tcTQ1dnMwdXI0bQ=="><i class="material-icons">photo_camera</i><span>ada_luxury_couture</span></a>
+            <a href="https://wa.me/2347048901551"><i class="material-icons">call</i><span>07048901551</span></a>
+        </div>
+    </footer>
+<style>
+    *{
+    padding:;
+    border:none;
+}
 
-          about.style.display ="inline"}
-          else{
-              about.style.display="none"
-        }
-      }
-    </script>
-  </body>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color:#6F4E37;
+}
+#open{
+    position:absolute ;
+    left:0px;
+    padding:5px;
+}
+.menu{
+    display:none;
+    flex-direction: column;
+    padding:20px;
+}
+span{
+    padding:2%;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+a{
+    color:white;
+}
+button{
+    background-color:#FFFDD0;
+    border-radius:10%;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+header nav a {
+    color: black;
+    text-decoration:none;
+</style>
+</body>
 </html>
